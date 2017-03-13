@@ -1,0 +1,26 @@
+all_students(StudentList).
+StudentList = [1415926, 5358979, 3238462, 6433832, 7950288].
+
+all_courses(CourseList).
+CourseList = ['ec102', 'cmpe160', 'math102', 'math202', 'cmpe240', 'cmpe230', 'phys201', 'ee212'].
+
+student_count('math102', StudentCount).
+StudentCount = 4.
+
+common_students('cmpe160', 'math102', StudentCount).
+StudentCount = 1.
+
+final_plan(FinalPlan).
+FinalPlan = [['ec102', 'ef106', 'm-1'], ['cmpe160', 'nh105', 'w-2'], ['math102', 'ef106', 'f-2'], ['math202', 'nh105', 'w-1'], ['cmpe240', 'nh101', 'm-3'], ['cmpe230', 'nh101', 'f-3'], ['phys201', 'nh105', 'f-1'], ['ee212', 'nh101', 'w-2']].
+
+errors_for_plan([['ec102', 'ef106', 'm-1'], ['cmpe160', 'nh105', 'w-2'], ['math102', 'ef106', 'f-2'], ['math202', 'nh105', 'w-1'], ['cmpe240', 'nh101', 'm-3'], ['cmpe230', 'nh101', 'f-3'], ['phys201', 'nh105', 'f-1'], ['ee212', 'nh101', 'w-2']], ErrorCount).
+ErrorCount = 0.
+
+errors_for_plan([['ec102', 'nh101', 'm-1'], ['cmpe160', 'nh105', 'w-2'], ['math102', 'ef106', 'f-2'], ['math202', 'nh105', 'w-1'], ['cmpe240', 'nh101', 'm-3'], ['cmpe230', 'nh101', 'f-3'], ['phys201', 'nh105', 'f-1'], ['ee212', 'nh101', 'w-2']], ErrorCount).
+ErrorCount = 3.
+
+errors_for_plan([['ec102', 'ef106', 'm-1'], ['cmpe160', 'nh105', 'w-2'], ['math102', 'ef106', 'w-2'], ['math202', 'nh105', 'w-1'], ['cmpe240', 'nh101', 'm-3'], ['cmpe230', 'nh101', 'f-3'], ['phys201', 'nh105', 'f-1'], ['ee212', 'nh101', 'f-2']], ErrorCount).
+ErrorCount = 1.
+
+errors_for_plan([['ec102', 'nh101', 'm-1'], ['cmpe160', 'nh105', 'w-2'], ['math102', 'ef106', 'w-2'], ['math202', 'nh105', 'w-1'], ['cmpe240', 'nh101', 'm-3'], ['cmpe230', 'nh101', 'f-3'], ['phys201', 'nh105', 'f-1'], ['ee212', 'nh101', 'f-2']], ErrorCount).
+ErrorCount = 4.
